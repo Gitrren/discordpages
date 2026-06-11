@@ -1,17 +1,14 @@
 const bots = {
   pokexbot: {
     name: "PokeXBot",
-    community: "PXG / PokeXGames",
     dashboard: "https://pokexbot.squareweb.app",
   },
   thomas: {
     name: "Thomas",
-    community: "RPG / Drakantos",
     dashboard: "https://thomas.squareweb.app",
   },
   chopper: {
     name: "Chopper",
-    community: "GLA",
     dashboard: "https://chopper.squareweb.app",
   },
 };
@@ -32,14 +29,13 @@ function list(items) {
 
 function privacy(bot) {
   const n = escapeHtml(bot.name);
-  const community = escapeHtml(bot.community);
   const dashboard = escapeHtml(bot.dashboard);
   return `
     <p class="meta">Last updated: ${updatedAt}</p>
     <p class="notice">
       This Privacy Policy explains how ${n} handles data while providing Discord
       moderation, dashboard, FAQ, giveaway, and server management features for
-      the ${community} community.
+      the communities it serves.
     </p>
 
     <h3>1. Data We Process</h3>
@@ -114,14 +110,13 @@ function privacy(bot) {
 
 function terms(bot) {
   const n = escapeHtml(bot.name);
-  const community = escapeHtml(bot.community);
   const dashboard = escapeHtml(bot.dashboard);
   return `
     <p class="meta">Last updated: ${updatedAt}</p>
     <p class="notice">
       These Terms of Service explain the rules for using ${n}, a Discord bot for
       moderation, dashboard, FAQ, giveaway, and server management features for
-      the ${community} community.
+      the communities it serves.
     </p>
 
     <h3>1. Acceptance</h3>
@@ -203,7 +198,7 @@ function renderLegalPage() {
   const title = type === "privacy" ? "Privacy Policy" : "Terms of Service";
   document.title = `${bot.name} ${title}`;
   root.innerHTML = `
-    <p class="eyebrow">${escapeHtml(bot.community)}</p>
+    <p class="eyebrow">Discord bot</p>
     <h1>${escapeHtml(bot.name)} ${title}</h1>
     ${type === "privacy" ? privacy(bot) : terms(bot)}
     <nav class="footer-nav" aria-label="Footer navigation">

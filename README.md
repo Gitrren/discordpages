@@ -1,6 +1,6 @@
-# WGS bot legal pages
+# Bot legal pages
 
-Static GitHub Pages site for the Terms of Service and Privacy Policy pages used by WGS Discord bots.
+Static GitHub Pages site for the Terms of Service and Privacy Policy pages used by our Discord bots.
 
 ## Links
 
